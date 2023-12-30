@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Karla:ital,wght@0,300;1,200&family=Lobster&family=Montserrat:wght@200;600&family=Poppins:ital,wght@0,200;0,300;1,100&family=Rethink+Sans&family=Roboto:wght@100;300;400&family=Ubuntu:wght@300;500&family=Work+Sans:wght@300&display=swap");
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 0;
+}
+
+nav h2 .link {
+  color: rgb(255, 255, 255);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Karla", sans-serif;
+}
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 4.5rem;
+}
+
+.navList .navListItem .link {
+  color: rgb(255, 255, 255);
+
+  transition: 0.3s ease;
+}
+.navList .navListItem .link:hover {
+  color: #0065f5;
+  transition: 0.3s ease;
+}
+
+.btn {
+  height: 3.5rem;
+  width: 9.2rem;
+  border-radius: 20px;
+  background-color: var(--mainColor);
+  border: none;
+  background-color: #01030d;
+}
+
+.icons {
+  display: none;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 990px) {
+  .icons {
+    display: block;
+  }
+  .navList {
+    display: none;
+  }
+  .link {
+    color: white;
+  }
+  .navListActive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-direction: column;
+    gap: 4rem;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+  .open,
+  .close {
+    font-size: 3rem;
+    margin-top: 6px;
+    position: relative;
+    z-index: 10000;
+  }
+}
