@@ -1,14 +1,19 @@
-import './Result.css'
+import React, { useEffect } from "react";
+import "./Result.css";
 import "react-loading-skeleton/dist/skeleton.css";
 import video from "../../assets/bg2.mp4";
-import { useParams , useNavigate} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 // import { MagnifyingGlass } from "react-loader-spinner";
-const Resultt = () => {
-  const { domain } = useParams();
+
+const Resultt: React.FC = () => {
+  const { domain } = useParams<{ domain: string }>();
   const navigate = useNavigate();
-  if(!domain){
-    return navigate('/');
-  }
+
+  useEffect(() => {
+    if (!domain) {
+      navigate("/");
+    }
+  }, [domain, navigate]);
 
   return (
     <div className="res_Container">
@@ -16,7 +21,8 @@ const Resultt = () => {
       <h1 className="res_Title">Result</h1>
 
       <div className="res_main">
-        {/* <div className="loder">
+        {/* 
+        <div className="loder">
           <MagnifyingGlass
             visible={true}
             height="80"
@@ -27,15 +33,16 @@ const Resultt = () => {
             glassColor="#c0efff"
             color="#e15b64"
           />
-        </div> */}
+        </div>
+        */}
         <div className="urlContent">
           <h1 className="urlName">
-            Domain Name - <span className='url'>{domain}</span>
+            Domain Name - <span className="url">{domain}</span>
           </h1>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Resultt
+export default Resultt;
