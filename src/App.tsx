@@ -6,15 +6,15 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/result" element={<Resultt/>}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/result/:domain" element={<Resultt />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App

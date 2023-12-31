@@ -1,9 +1,15 @@
 import './Result.css'
 import "react-loading-skeleton/dist/skeleton.css";
 import video from "../../assets/bg2.mp4";
-
+import { useParams , useNavigate} from "react-router-dom";
 // import { MagnifyingGlass } from "react-loader-spinner";
 const Resultt = () => {
+  const { domain } = useParams();
+  const navigate = useNavigate();
+  if(!domain){
+    return navigate('/');
+  }
+
   return (
     <div className="res_Container">
       <video src={video} muted autoPlay loop></video>
@@ -24,7 +30,7 @@ const Resultt = () => {
         </div> */}
         <div className="urlContent">
           <h1 className="urlName">
-            Domain Name - <span className='url'>www.google.com</span>
+            Domain Name - <span className='url'>{domain}</span>
           </h1>
         </div>
       </div>
