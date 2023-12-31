@@ -6,3 +6,43 @@ video{
     bottom: 0;
     z-index: -1000;
 }
+.headingHero{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;
+}
+.headingS{
+    color: rgb(0, 255, 8);
+}
+.heroH p{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+.extra{
+font-weight: 400;
+font-family: 'Lobster', sans-serif;
+}
+
+@media (max-width: 768px) {
+.headingHero {
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.heroH p{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+}
+@media (max-width: 426px) {
+.heroH p{
+font-size: 11px;
+}
+}
