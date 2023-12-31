@@ -40,6 +40,11 @@ font-family: 'Lobster', sans-serif;
     font-family: 'Work Sans', sans-serif;
     text-align: center;
 }
+.heroH {
+    padding: 10px;
+}
+
+
 }
 @media (max-width: 426px) {
 .heroH p{
