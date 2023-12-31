@@ -1,0 +1,41 @@
+video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  bottom: 0;
+  z-index: -1000;
+}
+
+.res_Title {
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  text-align: center;
+  font-size: 45px;
+}
+.res_main {
+      margin: 0 auto;
+  height: 60%;
+  width: 60%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.loder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.urlName {
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+}
+.url {
+  color: rgb(0, 255, 8);
+  font-family: "Montserrat", sans-serif;
+}

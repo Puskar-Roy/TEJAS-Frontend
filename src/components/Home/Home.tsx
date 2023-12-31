@@ -1,5 +1,6 @@
 import Hero from "../Hero/Hero"
 
+import './Home.css'
 
 const Home = () => {
   return (
