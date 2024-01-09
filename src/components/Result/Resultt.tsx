@@ -39,7 +39,7 @@ const Resultt: React.FC = () => {
           navigate("/");
         } else {
           const res = await axios.post<ResponseData>(
-            "http://localhost:8080/predict",
+            "https://tejasbackend-89zq.onrender.com/predict",
             {
               url: domain,
             }
